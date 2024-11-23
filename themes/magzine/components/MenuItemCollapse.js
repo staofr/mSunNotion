@@ -10,31 +10,31 @@ import { useEffect, useState } from 'react'
  */
 export const MenuItemCollapse = props => {
   const { link } = props
-  const [show, setShow] = useState(false)
+  const [show, changeShow] = useState(false)
   const hasSubMenu = link?.subMenus?.length > 0
 
-  const [isOpen, setOpen] = useState(false)
+  const [isOpen, changeIsOpen] = useState(false)
 
   const router = useRouter()
-
-  const selected = router.pathname === link.href || router.asPath === link.href
-
-  const toggleShow = () => {
-    setShow(!show)
-  }
-
-  const toggleOpenSubMenu = () => {
-    setOpen(!isOpen)
-  }
-
-  // 路由切换时菜单收起
-  useEffect(() => {
-    setOpen(false)
-  }, [router])
 
   if (!link || !link.show) {
     return null
   }
+
+  const selected = router.pathname === link.href || router.asPath === link.href
+
+  const toggleShow = () => {
+    changeShow(!show)
+  }
+
+  const toggleOpenSubMenu = () => {
+    changeIsOpen(!isOpen)
+  }
+
+  // 路由切换时菜单收起
+  useEffect(() => {
+    changeIsOpen(false)
+  }, [router])
 
   return (
     <>

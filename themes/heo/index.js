@@ -194,7 +194,7 @@ const LayoutSearch = props => {
     }
   }, [])
   return (
-    <div currentSearch={currentSearch}>
+    <div {...props} currentSearch={currentSearch}>
       <div id='post-outer-wrapper' className='px-5  md:px-0'>
         {!currentSearch ? (
           <SearchNav {...props} />

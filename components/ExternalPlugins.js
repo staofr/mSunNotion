@@ -7,8 +7,6 @@ import { useEffect } from 'react'
 import { GlobalStyle } from './GlobalStyle'
 import { initGoogleAdsense } from './GoogleAdsense'
 
-import Head from 'next/head'
-import ExternalScript from './ExternalScript'
 import WebWhiz from './Webwhiz'
 
 /**
@@ -254,16 +252,10 @@ const ExternalPlugin = props => {
       )}
 
       {AD_WWADS_ID && (
-        <>
-          <Head>
-            {/* 提前连接到广告服务器 */}
-            <link rel='preconnect' href='https://cdn.wwads.cn' />
-          </Head>
-          <ExternalScript
-            type='text/javascript'
-            src='https://cdn.wwads.cn/js/makemoney.js'
-          />
-        </>
+        <script
+          type='text/javascript'
+          src='https://cdn.wwads.cn/js/makemoney.js'
+          async></script>
       )}
 
       {/* {COMMENT_TWIKOO_ENV_ID && <script defer src={COMMENT_TWIKOO_CDN_URL} />} */}

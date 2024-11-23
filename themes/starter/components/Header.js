@@ -88,7 +88,7 @@ export const Header = props => {
                     </SignedOut>
                     <SignedIn>
                       <UserButton />
-                      <DashboardButton className={'hidden md:block'} />
+                      <DashboardButton />
                     </SignedIn>
                   </>
                 )}

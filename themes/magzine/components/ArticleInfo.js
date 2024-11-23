@@ -10,7 +10,7 @@ import TagItemMini from './TagItemMini'
  * @returns
  */
 export default function ArticleInfo(props) {
-  const { post } = props
+  const { post, siteInfo } = props
 
   return (
     <>
