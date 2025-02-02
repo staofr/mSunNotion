@@ -7,8 +7,11 @@ import { useEffect } from 'react'
 import { GlobalStyle } from './GlobalStyle'
 import { initGoogleAdsense } from './GoogleAdsense'
 
+<<<<<<< Updated upstream
 import Head from 'next/head'
 import ExternalScript from './ExternalScript'
+=======
+>>>>>>> Stashed changes
 import WebWhiz from './Webwhiz'
 
 /**

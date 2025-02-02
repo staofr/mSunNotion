@@ -15,7 +15,11 @@ export default function Footer (props) {
   return <footer className="relative w-full px-6 border-t">
 
         <div className="text-gray-300 container mx-auto max-w-4xl py-6 md:flex flex-wrap md:flex-no-wrap md:justify-between items-center text-sm">
+<<<<<<< Updated upstream
             <div className='text-center'> &copy;{`${copyrightDate}`} <a href="https://stao.fr" className=' hover:underline'>Stao.Fr </a> </div>
+=======
+            <div className='text-center'> &copy;{`${copyrightDate}`} {siteConfig('DESCRIPTION')}<a href="https://stao.fr" className=' hover:underline'>.Fr </a> </div>
+>>>>>>> Stashed changes
                 <DarkModeButton className='text-center pt-3'/>
         </div>
     </footer>
